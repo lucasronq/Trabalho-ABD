@@ -1,4 +1,8 @@
-CREATE DATABASE trabalhoABD;
+CREATE DATABASE trabalhoABD
+	WITH 
+	OWNER = postgres
+	ENCODING = 'UTF8'
+	CONNECTION LIMIT = -1;
 
 CREATE SEQUENCE paciente_id_paciente_seq START 1;
 CREATE SEQUENCE medico_id_medico_seq START 1;
