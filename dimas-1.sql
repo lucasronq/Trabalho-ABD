@@ -1,3 +1,12 @@
+CREATE DATABASE trabalhoABD;
+
+CREATE SEQUENCE paciente_id_paciente_seq START 1;
+CREATE SEQUENCE medico_id_medico_seq START 1;
+CREATE SEQUENCE atende_id_atende_seq START 1;
+CREATE SEQUENCE cirurgia_id_cirurgia_seq START 1;
+
+
+
 CREATE TABLE paciente (
 	id_paciente SERIAL PRIMARY KEY,
   	codigo VARCHAR(10) UNIQUE,
