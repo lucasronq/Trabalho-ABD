@@ -18,11 +18,6 @@ CREATE TABLE paciente (
     idade INTEGER NOT NULL
 );
 
-insert into paciente values (1,'p1', 'dimas', 13);
-insert into paciente values (2,'p2', 'carlos', 13);
-insert into paciente values (3,'p3', 'caaaaarlos', 15);
-insert into paciente values (5,'p5', 'dimasdasd', 16);
-
 INSERT INTO paciente (codigo, nome, idade) VALUES
     ('PAC001', 'João Silva', 35),
     ('PAC002', 'Maria Souza', 45),
@@ -45,8 +40,6 @@ CREATE TABLE medico (
 
 );
 
-insert into medico values (1,'crm1', 'carlos', 'pediatra');
-
 
 INSERT INTO medico (crm, nome, especialidade) VALUES
     ('CRM001', 'Dr. Carlos Silva', 'Cardiologia'),
@@ -68,13 +61,10 @@ CREATE TABLE atende (
     id_medico INTEGER NOT NULL REFERENCES medico(id_medico),
     data DATE NOT NULL
 );
-insert into atende values (1,1,1, '23/03/2023');
-insert into atende values (3,3,1, '25/05/2025');
-
 INSERT INTO atende (id_paciente, id_medico, data) VALUES
     (1, 3, '2022-01-10'),
     (2, 2, '2022-02-15'),
-	(2, 2, '2022-07-15'),
+    (2, 2, '2022-07-15'),
     (3, 1, '2022-03-20'),
     (4, 5, '2022-04-25'),
     (5, 4, '2022-05-30');
